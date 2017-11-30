@@ -1,294 +1,271 @@
 <html>
-<head>
-  <meta charset="utf-8"></meta>
-  <title>Esercizi</title>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Esercizi</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="script/jquery-3.2.1.slim.min.js"></script>
-  <script src="script/popper.min.js"></script>
-  <script src="script/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/spoiler.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="script/jquery-3.2.1.slim.min.js"></script>
+    <script src="script/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/spoiler.css">
+    <style type="text/css" media="screen">
 
-</head>
+      .container p 	{
+      	font-family: 'Droid Sans', sans-serif;
+      }
+
+      .container h1 	{
+      	MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-FAMILY: 'Droid Sans', sans-serif;
+      }
+
+      .container h2 	{
+      	MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-STYLE: italic; FONT-FAMILY: 'Droid Sans', sans-serif;
+      }
+
+      .container h3 	{
+      	MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-FAMILY: 'Droid Sans', sans-serif;
+      }
+
+      .form {
+      	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-TOP: 5px; HEIGHT: 25px
+      }
+      .exercise {
+      	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 20px
+      }
+
+      .exercise_number {
+      	font-family: 'Droid Sans', sans-serif;
+      	font-size: 1rem;
+      	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-TOP: 0px
+      }
+      .exercise_row {
+      	font-family: 'Droid Sans', sans-serif;
+      	font-size: 1rem;
+      	MARGIN-BOTTOM: 5px
+      }
+      .exercise_text {
+      	font-family: 'Droid Sans', sans-serif;
+      	font-size: 1rem;
+      	FONT-WEIGHT: normal; MARGIN: 0px 0px 25px
+      }
+      .exercise_marking {
+      	MARGIN: 0px 7px
+      }
+      .exercise_buttons {
+      	font-family: 'Droid Sans', sans-serif;
+      	font-size: 1rem;
+      	CLEAR: both; MARGIN: 50px 50px 50px;
+      }
+      .exercise_dropdown {
+      	MARGIN: 0px 5px
+      }
+      .exercise_gapfillbox {
+      	MARGIN: 10px 5px 0px
+      }
+      .sentencematching .exercise_text {
+      	WIDTH: 35%
+      }
+      .sentencematching SPAN {
+      	DISPLAY: block; FLOAT: left
+      }
+      .sentencematching INPUT {
+      	FLOAT: left
+      }
+      .upper_alpha {
+      	FONT-WEIGHT: bold;  MARGIN-LEFT: 150px; MARGIN-RIGHT: 10px;
+      }
+
+      /* Shared
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .button {
+        border-radius: 100px;
+      }
+
+      /* Sections
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .section {
+        padding: 0rem 0 0rem;
+        text-align: center;
+      }
+      .section-heading,
+      .section-description {
+        margin-bottom: 1.2rem;
+      }
+
+      /* Hero
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .phones {
+        position: relative;
+      }
+      .phone {
+        position: relative;
+        max-width: 80%;
+        margin: 3rem auto -12rem;
+      }
+      .phone + .phone {
+        display: none;
+      }
+
+      /* Values
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .values {
+        font-family: 'Droid Sans', sans-serif;
+        background-size: cover;
+        color: #000;
+        padding-bottom: 2rem;
+      }
+      .value-multiplier {
+        margin-bottom: .5rem;
+        color: #11DFC7;
+      }
+      .value-heading {
+        margin-bottom: .3rem;
+      }
+      .value-description {
+        opacity: .8;
+        font-weight: 300;
+      }
+
+      /* Help
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .get-help {
+      }
+
+      /* Categories
+      –––––––––––––––––––––––––––––––––––––––––––––––––– */
+      .categories {
+          background-size: cover;
+        color: #fff;
+      }
+      .categories .section-description {
+        margin-bottom: 4rem;
+      }
+
+      /* Bigger than 550 */
+      @media (min-width: 550px) {
+        .section {
+          padding: 12rem 0 11rem;
+        }
+        .hero {
+          padding-bottom: 12rem;
+          text-align: center;
+          height: 165px;
+        }
+        .phone {
+          position: absolute;
+          top: -7rem;
+          right: 3rem;
+          max-height: 362px;
+          z-index: 3;
+        }
+        .phone + .phone {
+          top: -6rem;
+          display: block;
+          max-width: 73.8%;
+          right: 0;
+          z-index: 2;
+          max-height: 338px;
+        }
+        .hero-heading {
+          font-size: 2.4rem;
+        }
+      }
+
+      /* Bigger than 750 */
+      @media (min-width: 750px) {
+        .hero {
+          height: 190px;
+        }
+        .hero-heading {
+          font-size: 2.6rem;
+        }
+        .section {
+          padding: 14rem 0 15rem;
+        }
+        .hero {
+          padding: 16rem 0 14rem;
+        }
+        .section-description {
+          max-width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .phone {
+          top: -14rem;
+          right: 5rem;
+          max-height: 510px;
+        }
+        .phone + .phone {
+          top: -12rem;
+          max-height: 472px;
+        }
+        .categories {
+          padding: 15rem 0 8rem;
+        }
+      }
+
+      /* Bigger than 1000 */
+      @media (min-width: 1000px) {
+        .section {
+          padding: 0rem 0 0rem;
+        }
+        .hero {
+          padding: 0rem 0;
+        }
+        .hero-heading {
+          font-size: 3.0rem;
+        }
+        .phone {
+          top: -16rem;
+          max-height: 615px;
+        }
+        .phone + .phone {
+          top: -14rem;
+          max-height: 570px;
+        }
+      }
+      }
+
+    </style>
+
+  </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href=><img src= 'images/logo_trasp.png' width="80px"></img></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.htm">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form1.htm">Contattaci</a>
-          </li>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href=><img src= 'images/logo_trasp.png' width="80px"></img></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.htm">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="form1.htm">Contattaci</a>
+              </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="libri.htm">Libri</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Lista Esercizi
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="esercizio1.htm">Esercizio 1</a>
-              <a class="dropdown-item" href="#">Esercizio 2</a>
-              <a class="dropdown-item" href="#">Esercizio 3</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div>
-
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="ANSI">
+              <li class="nav-item">
+                <a class="nav-link" href="libri.htm">Libri</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Lista Esercizi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="esercizio1.htm">Esercizio 1</a>
+                  <a class="dropdown-item" href="#">Esercizio 2</a>
+                  <a class="dropdown-item" href="#">Esercizio 3</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
 
 
-<title>Simple past - present perfect</title>
-
-<meta name="description" content="Esercizi gratuiti per imparare l'Inglese: Simple past - present perfect">
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/png" href="immagini/favicon.ico"/>
-<style type="text/css" media="screen">
-
-.container p 	{
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.container h1 	{
-	MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-FAMILY: 'Droid Sans', sans-serif;
-}
-
-.container h2 	{
-	MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-STYLE: italic; FONT-FAMILY: 'Droid Sans', sans-serif;
-}
-
-.container h3 	{
-	MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-FAMILY: 'Droid Sans', sans-serif;
-}
-
-.form {
-	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-TOP: 5px; HEIGHT: 25px
-}
-.exercise {
-	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 20px
-}
-
-.exercise_number {
-	font-family: 'Droid Sans', sans-serif;
-	font-size: 1rem;
-	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-TOP: 0px
-}
-.exercise_row {
-	font-family: 'Droid Sans', sans-serif;
-	font-size: 1rem;
-	MARGIN-BOTTOM: 5px
-}
-.exercise_text {
-	font-family: 'Droid Sans', sans-serif;
-	font-size: 1rem;
-	FONT-WEIGHT: normal; MARGIN: 0px 0px 25px
-}
-.exercise_marking {
-	MARGIN: 0px 7px
-}
-.exercise_buttons {
-	font-family: 'Droid Sans', sans-serif;
-	font-size: 1rem;
-	CLEAR: both; MARGIN: 50px 50px 50px;
-}
-.exercise_dropdown {
-	MARGIN: 0px 5px
-}
-.exercise_gapfillbox {
-	MARGIN: 10px 5px 0px
-}
-.sentencematching .exercise_text {
-	WIDTH: 35%
-}
-.sentencematching SPAN {
-	DISPLAY: block; FLOAT: left
-}
-.sentencematching INPUT {
-	FLOAT: left
-}
-.upper_alpha {
-	FONT-WEIGHT: bold;  MARGIN-LEFT: 150px; MARGIN-RIGHT: 10px;
-}
-
-/* Shared
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button {
-  border-radius: 100px;
-}
-
-/* Sections
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.section {
-  padding: 0rem 0 0rem;
-  text-align: center;
-}
-.section-heading,
-.section-description {
-  margin-bottom: 1.2rem;
-}
-
-/* Hero
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.phones {
-  position: relative;
-}
-.phone {
-  position: relative;
-  max-width: 80%;
-  margin: 3rem auto -12rem;
-}
-.phone + .phone {
-  display: none;
-}
-
-/* Values
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
-  font-family: 'Droid Sans', sans-serif;
-  background-size: cover;
-  color: #000;
-  padding-bottom: 2rem;
-}
-.value-multiplier {
-  margin-bottom: .5rem;
-  color: #11DFC7;
-}
-.value-heading {
-  margin-bottom: .3rem;
-}
-.value-description {
-  opacity: .8;
-  font-weight: 300;
-}
-
-/* Help
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.get-help {
-}
-
-/* Categories
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.categories {
-    background-size: cover;
-  color: #fff;
-}
-.categories .section-description {
-  margin-bottom: 4rem;
-}
-
-/* Bigger than 550 */
-@media (min-width: 550px) {
-  .section {
-    padding: 12rem 0 11rem;
-  }
-  .hero {
-    padding-bottom: 12rem;
-    text-align: center;
-    height: 165px;
-  }
-  .phone {
-    position: absolute;
-    top: -7rem;
-    right: 3rem;
-    max-height: 362px;
-    z-index: 3;
-  }
-  .phone + .phone {
-    top: -6rem;
-    display: block;
-    max-width: 73.8%;
-    right: 0;
-    z-index: 2;
-    max-height: 338px;
-  }
-  .hero-heading {
-    font-size: 2.4rem;
-  }
-}
-
-/* Bigger than 750 */
-@media (min-width: 750px) {
-  .hero {
-    height: 190px;
-  }
-  .hero-heading {
-    font-size: 2.6rem;
-  }
-  .section {
-    padding: 14rem 0 15rem;
-  }
-  .hero {
-    padding: 16rem 0 14rem;
-  }
-  .section-description {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .phone {
-    top: -14rem;
-    right: 5rem;
-    max-height: 510px;
-  }
-  .phone + .phone {
-    top: -12rem;
-    max-height: 472px;
-  }
-  .categories {
-    padding: 15rem 0 8rem;
-  }
-}
-
-/* Bigger than 1000 */
-@media (min-width: 1000px) {
-  .section {
-    padding: 0rem 0 0rem;
-  }
-  .hero {
-    padding: 0rem 0;
-  }
-  .hero-heading {
-    font-size: 3.0rem;
-  }
-  .phone {
-    top: -16rem;
-    max-height: 615px;
-  }
-  .phone + .phone {
-    top: -14rem;
-    max-height: 570px;
-  }
-}
-}
-
-</style>
-
-
-
-</head>
-
-<body>
-
-
-
+<div class="section get-help">
+    <div class="container">
       <!-- Main content start -->
-
 
 
 <!-- COPY EXERCISE CODE HERE -->
@@ -306,25 +283,25 @@
 //the variables answerArray and imageArray in gapfill.js accordingly.
 
 
-var question1 = new Array("I  ","have been", " in Bologna for almost a month now. (<em>be</em>)<br>", "40");
+var question1 = new Array("I  ","have been", " in Bologna for almost a month now. (<em>be</em>)<br>", "20");
 
-var question2 = new Array ("She ", "has forgotten", " to turn off the lights. (<em>forget</em>)<br>", "40");
+var question2 = new Array ("She ", "has forgotten", " to turn off the lights. (<em>forget</em>)<br>", "20");
 
-var question3 = new Array("Phil ","moved", " to that small city after his wedding. (<em>moved</em>)<br>", "40");
+var question3 = new Array("Phil ","moved", " to that small city after his wedding. (<em>moved</em>)<br>", "20");
 
-var question4 = new Array("The president ", "gave", " a very interesting speech an hour ago. (<em>give</em>)<br>", "40");
+var question4 = new Array("The president ", "gave", " a very interesting speech an hour ago. (<em>give</em>)<br>", "20");
 
-var question5 = new Array("Look! It ", "has started", " to rain. Get your umbrella. (<em>started</em>)<br>", "40");
+var question5 = new Array("Look! It ", "has started", " to rain. Get your umbrella. (<em>started</em>)<br>", "20");
 
-var question6 = new Array("In the middle ages people ", "thought", " the earth was flat. (<em>think</em>)<br>", "40");
+var question6 = new Array("In the middle ages people ", "thought", " the earth was flat. (<em>think</em>)<br>", "20");
 
-var question7 = new Array("There ", "was", " a big change in technology during the nineties. (<em>be</em>)<br>", "40");
+var question7 = new Array("There ", "was", " a big change in technology during the nineties. (<em>be</em>)<br>", "20");
 
-var question8 = new Array("Bill ", "has been", " very busy lately. (<em>be</em>)<br>", "40");
+var question8 = new Array("Bill ", "has been", " very busy lately. (<em>be</em>)<br>", "20");
 
-var question9 = new Array("J.K. Rowling ", "has written", " many children's books. (<em>write</em>)<br>", "40");
+var question9 = new Array("J.K. Rowling ", "has written", " many children's books. (<em>write</em>)<br>", "20");
 
-var question10 = new Array("Alessandro Manzoni ", "wrote", " the first italian novel. (<em>write</em>)<br>", "40");
+var question10 = new Array("Alessandro Manzoni ", "wrote", " the first italian novel. (<em>write</em>)<br>", "20");
 
 
 var questionArray = new Array (question1,question2,question3,question4,question5,question6,question7,question8,question9,question10);
@@ -352,18 +329,6 @@ var cheat = false;
 
 
 
-<!-- END OF EXERCISE CODE -->
-
-
-
-</body>
-</html>
-
-
-
-
-
-    </div>
 
     </body>
-</head>
+</html>
