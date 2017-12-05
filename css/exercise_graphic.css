@@ -1,0 +1,63 @@
+.container p 	{
+  font-family: 'Droid Sans', sans-serif;
+}
+.container h1 	{
+  MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-FAMILY: 'Droid Sans', sans-serif;
+}
+.container h2 	{
+  MARGIN-TOP: 4px; FONT-SIZE: normal; FONT-WEIGHT: bold; FONT-STYLE: italic; FONT-FAMILY: 'Droid Sans', sans-serif;
+}
+.form {
+  PADDING-RIGHT: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-TOP: 5px; HEIGHT: 25px
+}
+.exercise {
+  PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 20px
+}
+.exercise_number {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px 10px 0px 0px; PADDING-TOP: 0px
+}
+.exercise_row {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  MARGIN-BOTTOM: 5px
+}
+.exercise_text {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  FONT-WEIGHT: normal; MARGIN: 0px 0px 25px
+}
+
+.exercise_buttons {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  CLEAR: both; MARGIN: 50px 50px 50px;
+}
+
+.sentencematching .exercise_text {
+  WIDTH: 35%
+}
+.sentencematching SPAN {
+  DISPLAY: block; FLOAT: left
+}
+.sentencematching INPUT {
+  FLOAT: left
+}
+.upper_alpha {
+  FONT-WEIGHT: bold;  MARGIN-LEFT: 150px; MARGIN-RIGHT: 10px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  margin-top: 20;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 19px;
+}
+.prova{
+  text-align: center;
+}
