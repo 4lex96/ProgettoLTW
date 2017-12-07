@@ -9,7 +9,7 @@ function setUpPage(){
 
 		}
 		{
-			document.write("<div class='exercise_buttons'><input onClick=checkScore() type=button value='Score' name='button'> <input type=button value='See answers' onClick='reveal()' name='button2'> <input type='reset' onClick='again()' name='reset' value='Start again'></div>");
+			document.write("<div class='exercise_buttons'><input onClick=checkScore() type=button value='Punteggio' name='button'> <input type=button value='Risposte' onClick='reveal()' name='button2'> <input type='reset' onClick='again()' name='reset' value='Ricomincia'></div>");
 			}
 
 }
