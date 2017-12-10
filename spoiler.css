@@ -3,7 +3,7 @@ input[id^="spoiler"]{
 }
 input[id^="spoiler"] + label {
   display: block;
-  width: 800px;
+  width: 8px;
   margin: 0 auto;
   padding: 5px 20px;
   background: #343a40;
