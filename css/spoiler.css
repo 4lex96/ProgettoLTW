@@ -30,6 +30,7 @@ input[id^="spoiler"] ~ .spoiler {
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: all .6s;
+  text-align: center;
 }
 input[id^="spoiler"]:checked + label + .spoiler{
   height: auto;
