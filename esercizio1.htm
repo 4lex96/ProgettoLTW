@@ -10,83 +10,76 @@
     <link rel="stylesheet" type="text/css" href="css/spoiler.css">
     <link rel="stylesheet" type="text/css" href="css/exercise_graphic.css">
 
-
   </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href=><img src= 'images/logo_trasp.png' width="80px"></img></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.htm">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contattaci.htm">Contattaci</a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="libri.htm">Libri</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Lista Esercizi
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="esercizio1.htm">Esercizio 1</a>
-                  <a class="dropdown-item" href="esercizio2.htm">Esercizio 2</a>
-                  <a class="dropdown-item" href="esercizio3.htm">Esercizio 3</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <br><br>
-        <div class="section get-help">
-          <div class="container">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href=><img src= 'images/logo_trasp.png' width="80px"></img></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.htm">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contattaci.htm">Contattaci</a>
+          </li>
 
-              <DIV class=exercise>
+          <li class="nav-item">
+            <a class="nav-link" href="libri.htm">Libri</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lista Esercizi </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="esercizio1.htm">Esercizio 1</a>
+              <a class="dropdown-item" href="esercizio2.htm">Esercizio 2</a>
+              <a class="dropdown-item" href="esercizio3.htm">Esercizio 3</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-                <h2>Completa le frasi usando il verbo dato nelle parentesi </h2>
-                <exercise_row><i>Scrivere le risposte in minuscolo e senza usare le abbreviazioni</i></>
-                <br>
+    <br><br>
 
-                <SCRIPT language=JavaScript type=text/javascript>
+    <div class="section get-help">
+      <div class="container">
+        <div class=exercise>
 
-                  <!--
-                  //input questions as follows: ...Array("first phrase","required input", "second phrase", "input box length");
+          <h2>Completa le frasi usando il verbo dato nelle parentesi </h2>
+          <exercise_row><i>Scrivere le risposte in minuscolo e senza usare le abbreviazioni</i></exercise_row>
+          <br>
 
+          <SCRIPT language=JavaScript type=text/javascript>
 
-                  var question1 = new Array("I  ","have asked", " him to tidy his room several times. (<em>ask</em>)<br>", "20");
-                  var question2 = new Array ("My neighbour ", "has been playing", " the drums for the last three hours and it's driving me mad. (<em>play</em>)<br>", "20");
-                  var question3 = new Array("I ","have worked", " here for thirty years. (<em>work</em>)<br>", "20");
-                  var question4 = new Array("We ", "have met", " many times before. (<em>meet</em>)<br>", "20");
-                  var question5 = new Array("It was a relief to find the documents. I ", "have been", " looking for them all afternoon. (<em>look</em>)<br>", "20");
-                  var question6 = new Array("My father ", "has been cooking", " since last night. (<em>cook</em>)<br>", "20");
-                  var question7 = new Array("The price of fuel ", "has gone up", " 50% in the last six months. (<em>go up</em>)<br>", "20");
-                  var question8 = new Array("I ", "have been trying", " to get you on the phone all day. (<em>try</em>)<br>", "20");
-                  var question9 = new Array("My grandfather ", "has never been", " abroad. (<em>never be</em>)<br>", "20");
-                  var question10 = new Array("How many times ", "have you taken", " this exam. (<em>take</em>)<br>", "20");
-                  var questionArray = new Array (question1,question2,question3,question4,question5,question6,question7,question8,question9,question10);
-                  var cheat = false;
-
-                </SCRIPT>
-
-                <br>
-
-                <FORM id=esercizio name=esercizio>
+            <!--// Pattern: ...Array("Inizio frase","risposta da inserire", "continuo della frase", "lunghezza campo");
 
 
-                <SCRIPT language=JavaScript src="script/bits_gapfill.js" type=text/javascript></SCRIPT>
-              </div>
+            var question1 = new Array("I  ","have asked", " him to tidy his room several times. (<em>ask</em>)<br>", "20");
+            var question2 = new Array ("My neighbour ", "has been playing", " the drums for the last three hours and it's driving me mad. (<em>play</em>)<br>", "20");
+            var question3 = new Array("I ","have worked", " here for thirty years. (<em>work</em>)<br>", "20");
+            var question4 = new Array("We ", "have met", " many times before. (<em>meet</em>)<br>", "20");
+            var question5 = new Array("It was a relief to find the documents. I ", "have been", " looking for them all afternoon. (<em>look</em>)<br>", "20");
+            var question6 = new Array("My father ", "has been cooking", " since last night. (<em>cook</em>)<br>", "20");
+            var question7 = new Array("The price of fuel ", "has gone up", " 50% in the last six months. (<em>go up</em>)<br>", "20");
+            var question8 = new Array("I ", "have been trying", " to get you on the phone all day. (<em>try</em>)<br>", "20");
+            var question9 = new Array("My grandfather ", "has never been", " abroad. (<em>never be</em>)<br>", "20");
+            var question10 = new Array("How many times ", "have you taken", " this exam. (<em>take</em>)<br>", "20");
+            var questionArray = new Array (question1,question2,question3,question4,question5,question6,question7,question8,question9,question10);
+            var cheat = false;
 
-          </div>
+          </SCRIPT>
+
+          <br>
+
+          <FORM id=esercizio name=esercizio>
+
+          <SCRIPT language=JavaScript src="script/gapfill.js" type=text/javascript></SCRIPT>
         </div>
+      </div>
+    </div>
 
-
-
-
-    </body>
+  </body>
 </html>
