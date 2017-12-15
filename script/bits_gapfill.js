@@ -1,3 +1,10 @@
+/*
+* Funzione che inizializza la pagina:
+* - imposta sotto ogni riga l'icona trasparente, che verrà poi rimpiazzata da una spunta o una croce rispettivamente se la  risposta è corretta o errata.
+* - inizializza dinamicamente l'array delle domande e la pagina html
+* - inizializza dinamicamente l'array delle risposte
+*/
+
 setUpPage();
 function setUpPage(){
 	for(suindex = 0;suindex<questionArray.length;suindex++){
@@ -14,13 +21,19 @@ function setUpPage(){
 
 }
 
-var answerArray = new Array(document.esercizio1.ans1,document.esercizio1.ans2,document.esercizio1.ans3,document.esercizio1.ans4,document.esercizio1.ans5,document.esercizio1.ans6,document.esercizio1.ans7,document.esercizio1.ans8,document.esercizio1.ans9,document.esercizio1.ans10,document.esercizio1.ans11,document.esercizio1.ans12);
+var answerArray = new Array(document.esercizio.ans1,document.esercizio.ans2,document.esercizio.ans3,document.esercizio.ans4,document.esercizio.ans5,document.esercizio.ans6,document.esercizio.ans7,document.esercizio.ans8,document.esercizio.ans9,document.esercizio.ans10,document.esercizio.ans11,document.esercizio.ans12);
 var imageArray = new Array(document.images.im1,document.images.im2,document.images.im3,document.images.im4,document.images.im5,document.images.im6,document.images.im7,document.images.im8,document.images.im9,document.images.im10,document.images.im11,document.images.im12);
 function checkScore() {
-var answerArray = new Array(document.esercizio1.ans1,document.esercizio1.ans2,document.esercizio1.ans3,document.esercizio1.ans4,document.esercizio1.ans5,document.esercizio1.ans6,document.esercizio1.ans7,document.esercizio1.ans8,document.esercizio1.ans9,document.esercizio1.ans10,document.esercizio1.ans11,document.esercizio1.ans12);
+var answerArray = new Array(document.esercizio.ans1,document.esercizio.ans2,document.esercizio.ans3,document.esercizio.ans4,document.esercizio.ans5,document.esercizio.ans6,document.esercizio.ans7,document.esercizio.ans8,document.esercizio.ans9,document.esercizio.ans10,document.esercizio.ans11,document.esercizio.ans12);
 var imageArray = new Array(document.images.im1,document.images.im2,document.images.im3,document.images.im4,document.images.im5,document.images.im6,document.images.im7,document.images.im8,document.images.im9,document.images.im10,document.images.im11,document.images.im12);
 	if(cheat){
-		alert("Please press Start again to try again.")
+
+		/*
+		* Cheat, variabile che controlla se l'utente cerca di imbrogliare il test cliccando mostra le risposte e subito dopo verifica punteggio.
+		* Maggiori dettagli nelle funzioni reveal() e again()
+		*/
+
+		alert("Puoi vedere il punteggio solo se sei tu ad inserire le risposte.")
 	}else{
 		var score = 0;
 		for(csindex = 0;csindex<questionArray.length;csindex++){
@@ -31,7 +44,7 @@ var imageArray = new Array(document.images.im1,document.images.im2,document.imag
 				imageArray[csindex].src="images/cross_copia.png";
 			}
 		}
-		alert("Your score is "+score+" / " + questionArray.length);
+		alert("Il tuo punteggio è "+score+" / " + questionArray.length);
 	}
 }
 
@@ -39,7 +52,7 @@ var imageArray = new Array(document.images.im1,document.images.im2,document.imag
 
 
 function reveal() {
-var answerArray = new Array(document.esercizio1.ans1,document.esercizio1.ans2,document.esercizio1.ans3,document.esercizio1.ans4,document.esercizio1.ans5,document.esercizio1.ans6,document.esercizio1.ans7,document.esercizio1.ans8,document.esercizio1.ans9,document.esercizio1.ans10,document.esercizio1.ans11,document.esercizio1.ans12);
+var answerArray = new Array(document.esercizio.ans1,document.esercizio.ans2,document.esercizio.ans3,document.esercizio.ans4,document.esercizio.ans5,document.esercizio.ans6,document.esercizio.ans7,document.esercizio.ans8,document.esercizio.ans9,document.esercizio.ans10,document.esercizio.ans11,document.esercizio.ans12);
 var imageArray = new Array(document.images.im1,document.images.im2,document.images.im3,document.images.im4,document.images.im5,document.images.im6,document.images.im7,document.images.im8,document.images.im9,document.images.im10,document.images.im11,document.images.im12);
 	for(revindex = 0;revindex<questionArray.length;revindex++){
 		answerArray[revindex].value = questionArray[revindex][1];
@@ -48,7 +61,7 @@ var imageArray = new Array(document.images.im1,document.images.im2,document.imag
 	cheat = true;
 }
 function again() {
-var answerArray = new Array(document.esercizio1.ans1,document.esercizio1.ans2,document.esercizio1.ans3,document.esercizio1.ans4,document.esercizio1.ans5,document.esercizio1.ans6,document.esercizio1.ans7,document.esercizio1.ans8,document.esercizio1.ans9,document.esercizio1.ans10,document.esercizio1.ans11,document.esercizio1.ans12);
+var answerArray = new Array(document.esercizio.ans1,document.esercizio.ans2,document.esercizio.ans3,document.esercizio.ans4,document.esercizio.ans5,document.esercizio.ans6,document.esercizio.ans7,document.esercizio.ans8,document.esercizio.ans9,document.esercizio.ans10,document.esercizio.ans11,document.esercizio.ans12);
 var imageArray = new Array(document.images.im1,document.images.im2,document.images.im3,document.images.im4,document.images.im5,document.images.im6,document.images.im7,document.images.im8,document.images.im9,document.images.im10,document.images.im11,document.images.im12);
 	cheat = false;
 	for(agindex = 0;agindex<questionArray.length;agindex++){
